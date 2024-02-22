@@ -265,7 +265,7 @@ body {
 
     position: relative;
     display: block;
-    padding: 12px 10px;
+    padding: 12px 20px;
     margin: 20px 0;
     color: white;
     text-decoration: none;
@@ -274,7 +274,7 @@ body {
     letter-spacing: 3px;
     overflow: hidden;
     width: 15vh;
-    box-shadow: 5px 0px 0px var(--light);
+    box-shadow: 2px 0px 0px var(--light);
     font-size: 12px;
     opacity: 0.8;
     font-weight: normal;
