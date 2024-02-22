@@ -5,6 +5,8 @@ var light_color = '#81d9ef';
 var color_cycle = [light_color];
 var color_index = 0;
 
+var randomTheta = (Math.random() * (10 - 0.5)) + 0.5;
+
 // Function to compute e^(theta * i) + e^(theta * i * pi)
 function computeExpression(theta) {
     var resultReal = Math.cos(theta) + Math.cos(theta * Math.PI);
@@ -33,11 +35,13 @@ function updateCanvas(theta) {
     var x = centerX + expression.real * radius;
     var y = centerY + expression.imaginary * radius;
 
+    var line_width = 0.2;
+
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
     ctx.lineTo(x, y);
     ctx.strokeStyle = light_color;
-    ctx.lineWidth = 2;
+    ctx.lineWidth = line_width;
     ctx.stroke();
 
     // Draw the black line trail with fading effect
@@ -47,7 +51,7 @@ function updateCanvas(theta) {
         ctx.moveTo(trailPoint.x, trailPoint.y);
         ctx.lineTo(x, y);
         ctx.strokeStyle = light_color;
-        ctx.lineWidth = 1;
+        ctx.lineWidth = line_width;
         ctx.globalAlpha = 1 - (i / blackLineTrail.length); // Decrease opacity gradually
         ctx.stroke();
     }
@@ -59,9 +63,9 @@ function updateCanvas(theta) {
     blackLineTrail.push(startPoint);
 
     // If the trail becomes too long, remove the oldest point
-    if (blackLineTrail.length > 1000) {
-        blackLineTrail.shift();
-    }
+    //if (blackLineTrail.length > 1000) {
+    //  blackLineTrail.shift();
+    //}
 
     var resultElement1 = document.getElementById("result1");
     var resultElement2 = document.getElementById("result2");
@@ -73,15 +77,10 @@ function updateCanvas(theta) {
 }
 
 // Initial theta value
-var theta = 0.5;
+var theta = randomTheta;
 
 // Update canvas on page load
 updateCanvas(theta);
-
-// Update canvas every 3 seconds to cycle through colors
-setInterval(function () {
-    color_index = (color_index + 1) % color_cycle.length; // Move to the next color index
-}, 3000);
 
 // Update canvas when theta changes (for demonstration purposes)
 setInterval(function () {
