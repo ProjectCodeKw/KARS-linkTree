@@ -68,7 +68,9 @@ canvas {
   padding-right: 25%;
   padding-left: 25%;
   justify-content: center;
-
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
 }
 
 .body_btn {
@@ -104,6 +106,25 @@ canvas {
 
 .space {
   height: 50px;
+}
+
+
+.insta-logo {
+  width: 30px;
+  height: 30px;
+  padding-left: 15px;
+}
+
+.discord-logo {
+  width: 30px;
+  height: 25px;
+  padding-left: 15px;
+}
+
+.twitter-logo {
+  width: 30px;
+  height: 25px;
+  padding-left: 15px;
 }
 
 /*MOBILE USERS VIEW*/
@@ -152,7 +173,7 @@ canvas {
 
     position: relative;
     display: block;
-    padding: 12px 3px;
+    padding: 12px 10px;
     margin: 20px 0;
     color: white;
     text-decoration: none;
@@ -168,7 +189,7 @@ canvas {
   }
 
   .space {
-    height: 0px;
+    height: 20px;
   }
 
   .insta-logo {
