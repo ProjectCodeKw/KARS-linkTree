@@ -89,7 +89,7 @@ canvas {
   overflow: hidden;
   font-weight: bold;
   width: 100vh;
-  box-shadow: 5px 2px 4px var(--light);
+  box-shadow: 5px 0px 0px var(--light);
   opacity: 0.8;
 
 }
@@ -216,11 +216,11 @@ body {
 
 /*MOBILE USERS VIEW*/
 @media only screen and (max-width: 600px) {
-  body{
-      overflow-x: hidden;
-  overflow-y: hidden;
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
-  
+
   .logo {
     padding: 0;
     margin: 0;
@@ -244,8 +244,8 @@ body {
     gap: 0px;
     height: 100%;
     width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
   }
 
@@ -301,24 +301,24 @@ body {
     height: 15px;
     padding-left: 15px;
   }
-  
-  
-.g-container {
-  text-align: center;
-  padding-left: 0vh;
-  padding-top: 18vh;
-}
 
-.glitch {
-  width: 200px;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  position: relative;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
-  animation: glitch 725ms infinite;
-}
+
+  .g-container {
+    text-align: center;
+    padding-left: 0vh;
+    padding-top: 18vh;
+  }
+
+  .glitch {
+    width: 200px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+    animation: glitch 725ms infinite;
+  }
 
 
 }
