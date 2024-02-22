@@ -141,6 +141,10 @@ canvas {
     padding-right: 25%;
     padding-left: 25%;
     justify-content: center;
+    align-self: center;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
 
   }
 
@@ -148,22 +152,41 @@ canvas {
 
     position: relative;
     display: block;
-    padding: 12px 20px;
+    padding: 12px 3px;
     margin: 20px 0;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     overflow: hidden;
-    width: 100vh;
-    box-shadow: 5px 2px 4px var(--light);
-    font-size: 14px;
+    width: 15vh;
+    box-shadow: 5px 0px 0px var(--light);
+    font-size: 12px;
     opacity: 0.8;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .space {
     height: 0px;
   }
+
+  .insta-logo {
+    width: 20px;
+    height: 20px;
+    padding-left: 15px;
+  }
+
+  .discord-logo {
+    width: 20px;
+    height: 15px;
+    padding-left: 15px;
+  }
+
+  .twitter-logo {
+    width: 20px;
+    height: 15px;
+    padding-left: 15px;
+  }
+
 }
