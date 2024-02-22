@@ -2,7 +2,7 @@ var main_color = '#51b9d2';
 var second_color = '#005164';
 var light_color = '#81d9ef';
 
-var color_cycle = [main_color, second_color];
+var color_cycle = [light_color];
 var color_index = 0;
 
 // Function to compute e^(theta * i) + e^(theta * i * pi)
@@ -36,7 +36,7 @@ function updateCanvas(theta) {
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
     ctx.lineTo(x, y);
-    ctx.strokeStyle = color_cycle[color_index];
+    ctx.strokeStyle = light_color;
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -46,7 +46,7 @@ function updateCanvas(theta) {
         ctx.beginPath();
         ctx.moveTo(trailPoint.x, trailPoint.y);
         ctx.lineTo(x, y);
-        ctx.strokeStyle = color_cycle[color_index];
+        ctx.strokeStyle = light_color;
         ctx.lineWidth = 1;
         ctx.globalAlpha = 1 - (i / blackLineTrail.length); // Decrease opacity gradually
         ctx.stroke();
