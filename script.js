@@ -62,6 +62,14 @@ function updateCanvas(theta) {
     if (blackLineTrail.length > 1000) {
         blackLineTrail.shift();
     }
+
+    var resultElement1 = document.getElementById("result1");
+    var resultElement2 = document.getElementById("result2");
+    var resultElement3 = document.getElementById("result3");
+
+    resultElement1.textContent = `${expression.real.toFixed(2)} + ${expression.imaginary.toFixed(2)}j`;
+    resultElement3.textContent = `${expression.real.toFixed(2)} + ${expression.imaginary.toFixed(2)}j`;
+    resultElement2.textContent = `${expression.real.toFixed(2)} + ${expression.imaginary.toFixed(2)}j`;
 }
 
 // Initial theta value
@@ -71,12 +79,12 @@ var theta = 0.5;
 updateCanvas(theta);
 
 // Update canvas every 3 seconds to cycle through colors
-setInterval(function() {
+setInterval(function () {
     color_index = (color_index + 1) % color_cycle.length; // Move to the next color index
 }, 3000);
 
 // Update canvas when theta changes (for demonstration purposes)
-setInterval(function() {
+setInterval(function () {
     theta += 0.01; // Change theta by a small amount
     updateCanvas(theta);
 }, 20); // Adjust the timing as needed
